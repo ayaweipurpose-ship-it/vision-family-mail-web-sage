@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join a Department – Vision Family Church</title>
+
+  <style>
+    body {
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#121212;
+      color:#e0e0e0;
+    }
+
+    header {
+      background:#1e0b3a;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      margin:0;
+      font-size:2.5em;
+    }
+
+    .container {
+      max-width:700px;
+      margin:40px auto;
+      background:#1a1a1a;
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.5);
+    }
+
+    label {
+      font-weight:bold;
+      display:block;
+      margin-top:20px;
+      margin-bottom:5px;
+    }
+
+    input, select, textarea {
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:5px;
+      background:#2a2a2a;
+      color:#e0e0e0;
+      font-size:1em;
+    }
+
+    button {
+      background:#b3541e;
+      color:white;
+      border:none;
+      margin-top:20px;
+      padding:12px 20px;
+      border-radius:5px;
+      font-size:1em;
+      cursor:pointer;
+    }
+
+    button:hover {
+      background:#913f12;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Join a Department</h1>
+    <p>Become a part of the Vision Family Church workforce</p>
+  </header>
+
+  <div class="container">
+    <form>
+
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" required>
+
+      <label>Phone Number</label>
+      <input type="text" placeholder="Enter your phone number" required>
+
+      <label>Email Address (optional)</label>
+      <input type="email" placeholder="Enter your email">
+
+      <label>Choose Department</label>
+      <select required>
+        <option value="">Select a department</option>
+        <option value="choir">Choir / Music Ministry</option>
+        <option value="ushering">Ushering Team</option>
+        <option value="media">Media & Technical Team</option>
+        <option value="prayer">Prayer & Intercession Team</option>
+        <option value="youth">Youth Ministry</option>
+        <option value="children">Children’s Ministry</option>
+        <option value="protocol">Protocol / Security Team</option>
+        <option value="sanctuary">Sanctuary Cleaners</option>
+        <option value="sanctuary">Regular Member</option>
+      </select>
+
+      <label>Why Would You Like to Join?</label>
+      <textarea rows="4" placeholder="Tell us briefly..." required></textarea>
+
+      <button type="submit">Submit Application</button>
+
+    </form>
+  </div>
+<script>
+  function goToDepartment(dept) {
+    if (dept === "") return;
+
+    if (dept === "choir") {
+      // Redirect to the LIVE choir website
+      window.location.href = "https://choir-wed-site.vercel.app/";
+    } else {
+      alert("This department page is not available yet.");
+    }
+  }
+</script>
+</body>
+</html>
